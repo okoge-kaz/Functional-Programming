@@ -10,7 +10,7 @@
 (make-course-record 'FP 'Tokunaga 'CSC.T263)
 (make-course-record 'OOP 'Kobayashi 'CSC.T273)
 #|
-
+schemeにおける対(pair)を表すconsを用いて、引数にて受け取ったid_,instructor_,number_をそれぞれ、'id,'instructor,'numberとpairをつくり、それらをリスト形式で並べることで題意の求めるデータ構造を実現している。
 |#
 
 
@@ -27,8 +27,6 @@ fp
 (get-instructor fp)
 (get-number oop)
 
-#|
-|#
 
 ; 3A-3
 (define (update-instructor course update_instructor)
@@ -40,4 +38,6 @@ fp
 fp
 (update-instructor (update-instructor fp 'Moriguchi) 'Tokunaga)
 #|
+6
+(理由)新しくデータを作る際には、make-course-recordを利用しているが、make-course-recordではconsが6回出現するため
 |#
